@@ -1,0 +1,34 @@
+{
+  "name": "working-with-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel./scr--out-dir ./dist",
+    "start": "node dist/server.js",
+    "debug": "npm run dev -- --inspect",
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js",
+    "test": "jest --runInBand",
+    "test:watch": "jest test -- --watch",
+    "test: coverage": "npm test -- --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cls-hooked": "^4.2.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
+  }
+}
