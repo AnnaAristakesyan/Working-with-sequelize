@@ -1,6 +1,6 @@
 module.exports = {
     development: {
-      username: 'posgres',
+      username: 'postgres',
       password: '2107',
       database: 'sequelise_working',
       host: 'localhost',

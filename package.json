@@ -19,6 +19,7 @@
     "@babel/cli": "^7.24.5",
     "@babel/core": "^7.24.5",
     "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.5",
     "@types/jest": "^29.5.12",
     "cross-env": "^7.0.3",
     "nodemon": "^3.1.0",
@@ -35,5 +36,4 @@
     "sequelize": "^6.37.3",
     "sequelize-cli": "^6.6.2"
   }
-
 }

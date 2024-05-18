@@ -1,6 +1,6 @@
 import './config';
 import Database from './database';
-import environment from './config/environment';
+import envirement from './config/envirement';
 import dbConfig from './config/database';
 import express from 'express';
 
@@ -8,7 +8,7 @@ const app = express();
 
 (async () => {
   try {
-    const db = new Database(environment.nodeEnv, dbConfig);
+    const db = new Database(envirement.nodeEnv, dbConfig);
     await db.connect();
     console.log('Database connected successfully');
 
