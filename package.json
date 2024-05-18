@@ -10,7 +10,7 @@
     "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js",
     "test": "jest --runInBand",
     "test:watch": "jest test -- --watch",
-    "test: coverage": "npm test -- --coverage"
+    "test:coverage": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "",
