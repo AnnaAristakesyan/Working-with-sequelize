@@ -7,16 +7,20 @@
     "build": "babel./scr--out-dir ./dist",
     "start": "node dist/server.js",
     "debug": "npm run dev -- --inspect",
-    "dev": "NODE_ENV=development nodemon --exec babel-node src/server.js",
     "test": "jest --runInBand",
     "test:watch": "jest test -- --watch",
-    "test:coverage": "npm test -- --coverage"
+    "test:coverage": "npm test -- --coverage",
+    "dev": "cross-env NODE_ENV=development nodemon --exec ./node_modules/.bin/babel-node src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/node": "^7.23.9",
     "@types/jest": "^29.5.12",
+    "cross-env": "^7.0.3",
     "nodemon": "^3.1.0",
     "supertest": "^7.0.0"
   },
@@ -31,4 +35,5 @@
     "sequelize": "^6.37.3",
     "sequelize-cli": "^6.6.2"
   }
+
 }

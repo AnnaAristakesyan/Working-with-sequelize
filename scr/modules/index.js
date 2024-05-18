@@ -1,27 +1,21 @@
-import fs from 'fs';
-import path from 'path';
+const { Sequelize } = require('sequelize');
 
-let models = {};
-
-export function registerModels(sequelize) {
-  const thisFile = path.basename(__filename); // index.js
-  const modelFiles = fs.readdirSync(__dirname);
-  const filteredModelFiles = modelFiles.filter((file) => {
-    return file !== thisFile && file.slice(-3) === '.js';
+function registerModels(sequelize) {
+  // Example model
+  const User = sequelize.define('User', {
+    username: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
   });
 
-  for (const file of filteredModelFiles) {
-    const model = require(path.join(__dirname, file)).default(sequelize);
-    models[model.name] = model;
-  }
+  // Add more models here
 
-  Object.keys(models).forEach((modelName) => {
-    if (models[modelName].associate) {
-      models[modelName].associate(models);
-    }
-  });
-
-  models.sequelize = sequelize;
+  return sequelize;
 }
 
-export default models;
+module.exports = { registerModels };
